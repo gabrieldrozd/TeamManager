@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamManager", "TeamManager\TeamManager.csproj", "{FEF8D658-65A3-4CBD-88AC-1280E9EC0267}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamManager.Database", "TeamManager.Database\TeamManager.Database.csproj", "{4F2A51F0-9428-46B3-B513-6D9CCA108262}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEF8D658-65A3-4CBD-88AC-1280E9EC0267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF8D658-65A3-4CBD-88AC-1280E9EC0267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF8D658-65A3-4CBD-88AC-1280E9EC0267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF8D658-65A3-4CBD-88AC-1280E9EC0267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2A51F0-9428-46B3-B513-6D9CCA108262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2A51F0-9428-46B3-B513-6D9CCA108262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2A51F0-9428-46B3-B513-6D9CCA108262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2A51F0-9428-46B3-B513-6D9CCA108262}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98F052D9-5858-4ECF-BCC1-2C1DD7748941}
+	EndGlobalSection
+EndGlobal
