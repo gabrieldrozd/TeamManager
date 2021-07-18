@@ -16,7 +16,8 @@ namespace TeamManager.Database
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite($"Filename={Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TeamManagerDB.sqlite")}");
+                optionsBuilder.UseSqlite($"Filename=" +
+                    $"{Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TeamManagerDB.sqlite")}");
             }
         }
 
@@ -26,18 +27,6 @@ namespace TeamManager.Database
                 .HasOne<Department>(x => x.Department) 
                 .WithOne(y => y.User)
                 .HasForeignKey<Department>(y => y.UserId);
-
-            //modelBuilder.Entity<EmployeeContact>()
-            //    .HasOne<Employee>(x => x.Employee)
-            //    .WithOne(y => y.EmployeeContact)
-            //    .HasForeignKey<Employee>(y => y.EmpContactId);
-
-            //modelBuilder.Entity<Employee>()
-            //    .HasOne<Department>(x => x.Department)
-            //    .WithMany(y => y.Employee)
-            //    .HasForeignKey(z => z.DepartmentId);
-
-            //modelBuilder.Entity<>
 
             base.OnModelCreating(modelBuilder);
         }

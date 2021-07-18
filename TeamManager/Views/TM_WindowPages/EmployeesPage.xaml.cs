@@ -45,7 +45,7 @@ namespace TeamManager.Views.TM_WindowPages
                 var employeesList = db.Employee.Select(x => x)
                     .Where(x => x.DepartmentId == Informations.CurrentDepartmentId).ToList();
 
-                if (employeesList == null)
+                if (employeesList != null)
                 {
                     return true;
                 }
@@ -129,6 +129,20 @@ namespace TeamManager.Views.TM_WindowPages
             {
                 var sendEmailWindow = new SendEmailWindow(selectedEmployeeContact);
                 sendEmailWindow.ShowDialog();
+            }
+        }
+
+        private void SearchEmployees_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchBox = sender as TextBox;
+
+            using (var db = new TeamManagerContext())
+            {
+                var filteredTasks = db.Employee.Select(x => x).Where(
+                    x => (x.FirstName.Contains(searchBox.Text) || x.LastName.Contains(searchBox.Text)) &&
+                    x.DepartmentId == Informations.CurrentDepartmentId).ToList();
+
+                employeesListView.ItemsSource = filteredTasks;
             }
         }
     }

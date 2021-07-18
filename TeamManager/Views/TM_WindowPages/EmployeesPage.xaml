@@ -65,8 +65,22 @@
                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                 MinWidth="150" Width="150" MinHeight="80" Height="80"/>
 
-        <ScrollViewer Grid.Row="0" Grid.Column="3"
-                      Grid.RowSpan="10" Grid.ColumnSpan="7"
+        <Label Content="Find employee by name or last name:" Style="{DynamicResource RoundLabelCorners}"
+               Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="4"
+               FontSize="12" FontWeight="Bold"
+               Background="#3746CD" Foreground="FloralWhite"
+               HorizontalAlignment="Center" VerticalAlignment="Center"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+               MinWidth="230" Width="230"  MinHeight="35" Height="35"/>
+
+        <TextBox TextChanged="SearchEmployees_TextChanged"
+                 Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="3"
+                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                 Foreground="#3746CD"
+                 Margin="0,8,30,8"/>
+        
+        <ScrollViewer Grid.Row="1" Grid.Column="3"
+                      Grid.RowSpan="9" Grid.ColumnSpan="7"
                       Background="CornflowerBlue"  Margin="5"
                       VerticalScrollBarVisibility="Auto">
             <ListView x:Name="employeesListView"
